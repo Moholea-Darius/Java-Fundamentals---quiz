@@ -1,0 +1,20 @@
+Nu am putut sa modific în quiz frumos și am zis sa fac așa: 
+
+
+    public static void main(String[] args) {
+        String[] strings = {"itEA", "hOME"};
+        for (String string : strings) {
+            String copy = "";
+            for (int i = 0; i<string.length(); i++) {
+                copy = copy + (char) toAlternativeCase(string.charAt(i));
+            }
+            System.out.print(copy + " ");
+        }
+    }
+
+    private static int toAlternativeCase(char a){
+        if (a >= 65 && a <= 90){
+            return a + 32;
+        }
+        return a - 32;
+    }
